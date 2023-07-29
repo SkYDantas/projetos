@@ -54,7 +54,7 @@ header::after {
     right: 1rem;
     width: 2rem;
     height: 2rem;
-    background-image: url(/assets/img/arrow-top.svg);
+    background-image: url(assets/img/arrow-top.svg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -95,15 +95,15 @@ header .titulo {
 }
 
 .informacao .job::before {
-    background-image: url(/assets/img/job.svg);
+    background-image: url(assets/img/job.svg);
 }
 
 .informacao .localidade::before {
-    background-image: url(/assets/img/location.svg);
+    background-image: url(assets/img/location.svg);
 }
 
 .informacao .fone::before {
-    background-image: url(/assets/img/phone.svg);
+    background-image: url(assets/img/phone.svg);
 }
 
 * {
@@ -157,7 +157,7 @@ a:hover {
     display: inline-block;
     width: 2.5rem;
     height: 1.5rem;
-    background-image: url(img/arrow-top.svg);
+    background-image: url(assets/img/arrow-top.svg);
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.25s;
@@ -285,7 +285,7 @@ button, a.button {
     content: '';
     display: inline-block;
     width: 1rem;
-    background-image: url(img/check.svg);
+    background-image: url(assets/img/check.svg);
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 0.5rem;
