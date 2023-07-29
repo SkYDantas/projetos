@@ -16,12 +16,12 @@
 
 .coluna-esquerda {
   left: 0; 
-  background: url(/assets/img/column.png) repeat-y; 
+  background: url(assets/img/column.png) repeat-y; 
 }
 
 .coluna-direita {
   right: 0; 
-  background: url(/assets/img/column.png) repeat-y; 
+  background: url(assets/img/column.png) repeat-y; 
 }
 
 .conteudo-central {
