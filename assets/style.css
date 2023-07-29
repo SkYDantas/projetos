@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=M+PLUS+Rounded+1c:wght@300;400;700&family=Nunito:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', 'M PLUS Rounded 1c', 'Nunito', monospace, sans-serif;
+}
+
+.coluna-esquerda, .coluna-direita {
+  height: 100vh; 
+  width: 50px; 
+  position: fixed; 
+  top: 0;
+}
+
+.coluna-esquerda {
+  left: 0; 
+  background: url(/assets/img/column.png) repeat-y; 
+}
+
+.coluna-direita {
+  right: 0; 
+  background: url(/assets/img/column.png) repeat-y; 
+}
+
+.conteudo-central {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 0 50px;
+}
+
+body {
+  margin: 0; /* Remova as margens padrão do corpo da página */
+  background: rgb(55, 20, 102);
+  background: linear-gradient(315deg, rgba(55, 20, 102, 1) 4%, rgba(67, 112, 177, 1) 24%, rgba(44, 180, 179, 1) 43%, rgba(0, 255, 252, 1) 66%, rgba(26, 136, 158, 1) 84%, rgba(102, 0, 255, 1) 100%);
+  background-repeat: no-repeat;
+  
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(/assets/img/arrow-top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .foto {
+    width: 400px;
+    height: 370px;
+    border-radius: 10%;
+    position: relative;
+    margin-bottom:5px ;
+    top: 5px;
+}
+
+header .titulo {
+    text-align: center;
+}
+
+.informacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.informacao p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.informacao p::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+.informacao .job::before {
+    background-image: url(/assets/img/job.svg);
+}
+
+.informacao .localidade::before {
+    background-image: url(/assets/img/location.svg);
+}
+
+.informacao .fone::before {
+    background-image: url(/assets/img/phone.svg);
+}
+
+* {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.janela {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem;
+    border: 12px solid darkcyan;
+    border-radius: 1rem;
+    transition: 0.25s;
+}
+
+.janela.open, .janela:hover {
+    background-color: #344fbd;
+    border-color: #95afbb;
+}
+
+.janela .abrir {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: azure;
+    border: none;
+}
+
+.janela .abrir h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.janela .abrir:hover {
+    cursor: pointer;
+}
+
+.janela .abrir::after {
+    content: '';
+    display: inline-block;
+    width: 2.5rem;
+    height: 1.5rem;
+    background-image: url(img/arrow-top.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.25s;
+}
+
+.janela.open .abrir::after {
+    transform: rotate(180deg);
+}
+
+.janela .conteudo {
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    overflow: hidden;
+}
+
+.janela.open .conteudo {
+  display: block;
+  padding: 0 1rem 1rem 2rem;
+  height: auto;
+  opacity: 1;
+}
+
+/* button styles */
+button, a.button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* WhatsApp-style button */
+.whatsapp-button {
+    display: inline-block;
+    padding: 30px 0px;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 999;
+}
+
+.whatsapp-button img {
+    width: 150px;
+    height: 90px;
+    vertical-align: middle;
+}
+
+/* hover effect */
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#hardSkills {
+  display: flex; /* Change the display to flex to make the images align in a row */
+  flex-wrap: wrap;
+  justify-content: center; /* Center the images horizontally within the row */
+}
+
+#hardSkills li {
+  display: flex; /* Ensure each skill item is displayed as a flex container */
+  flex-direction: column;
+  align-items: center; /* Center the content (image and text) vertically */
+  margin: 10px; /* Add some spacing between the skill items */
+}
+
+#hardSkills li img {
+  width: 80px;
+  height: 100px;
+}
+
+.skills .ferramentas ul li img {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 0.5rem;
+}
+
+.skill .pessoal ul li {
+    margin-left: 2rem;
+    padding: 0.5rem;
+}
+
+.experiencia li {
+    margin-bottom: 1rem;
+}
+
+.idiomas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.idiomas li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+
+.idiomas li::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    background-image: url(img/check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.5rem;
+}
+
+.portifolio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.portifolio li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.portifolio li h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer img {
+    align-content: center;
+    align-items: center;
+    max-width: 1900px;
+    max-height: 900;
+}
+
+@media screen and (min-width: 760px) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "foto titulo"
+      "informacao informacao";
+  }
+}
+
+
+header .foto {
+  grid-area: foto;
+  text-align: center;
+  max-width: 400px;
+  max-height: 370px;
+}
+
+header .titulo {
+  grid-area: titulo;
+  text-align: center;
+  max-width: 210px;
+}
+
+header .informacao {
+  grid-area: informacao;
+}
+
+.main {
+  max-width: 800px;
+  margin: 1rem auto;
+}
+
+.main::before,
+.main::after {
+  width: 70vw;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
